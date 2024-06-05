@@ -20,8 +20,8 @@
         var downloadPdfButton = document.getElementById('downloadPdfButton');
         var pdfContainer = document.getElementById('pdfButton');
         function checkScreenSize() {
-            var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-            if (width <= 700) {
+            var isMobile = window.matchMedia("only screen and (max-width: 700px)").matches;
+            if (isMobile) {
                 pdfContainer.style.display = 'flex';
                 pdfContainer.style.height = '100%';
                 pdfContainer.style.alignItems = 'center';
